@@ -101,7 +101,7 @@ export default function Navbar({ onBookingClick }: NavbarProps) {
         transition={{ duration: 0.3 }}
         className={`fixed inset-0 z-40 bg-cream-50 lg:hidden ${isMobileMenuOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
       >
-        <div className="flex flex-col items-center justify-center h-full space-y-8 px-8">
+        <div className="flex flex-col items-center justify-center h-full space-y-6 sm:space-y-8 px-6 sm:px-8">
           {navLinks.map((link, index) => (
             <motion.a
               key={link.href}
@@ -113,7 +113,7 @@ export default function Navbar({ onBookingClick }: NavbarProps) {
                 y: isMobileMenuOpen ? 0 : 20,
               }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="text-2xl font-light text-charcoal-900 uppercase tracking-wide"
+              className="text-xl sm:text-2xl font-light text-charcoal-900 uppercase tracking-wide"
             >
               {link.label}
             </motion.a>
@@ -129,7 +129,7 @@ export default function Navbar({ onBookingClick }: NavbarProps) {
               y: isMobileMenuOpen ? 0 : 20,
             }}
             transition={{ duration: 0.4, delay: navLinks.length * 0.1 }}
-            className="text-xs font-light uppercase tracking-[0.2em] border border-charcoal-900 px-12 py-4
+            className="text-xs font-light uppercase tracking-[0.2em] border border-charcoal-900 px-8 sm:px-12 py-3 sm:py-4
                      hover:bg-charcoal-900 hover:text-cream-50 transition-all duration-300"
           >
             Prendre rendez-vous

@@ -92,7 +92,7 @@ export default function Contact() {
         >
           <form onSubmit={handleSubmit} className="space-y-12">
             {/* Name & Email Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
@@ -173,7 +173,7 @@ export default function Contact() {
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative px-16 py-5 overflow-hidden border border-charcoal-900 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="group relative px-12 sm:px-16 py-4 sm:py-5 overflow-hidden border border-charcoal-900 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <motion.div
                   className="absolute inset-0 bg-charcoal-900"
@@ -197,7 +197,7 @@ export default function Contact() {
             transition={{ duration: 1.2, delay: 1.2 }}
             className="mt-32 pt-16 border-t border-cream-200"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-center md:text-left">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-center md:text-left">
               <div>
                 <h4 className="text-xs uppercase tracking-[0.2em] text-gold-500 font-light mb-4">
                   Adresse

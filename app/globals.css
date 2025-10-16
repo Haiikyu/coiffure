@@ -15,10 +15,35 @@
   body {
     @apply bg-cream-50 text-charcoal-900 antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
+    /* Mobile optimization */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   html {
     scroll-behavior: smooth;
+    /* Prevent text size adjustments on orientation change */
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Touch optimization */
+  button, a, input, textarea, select {
+    -webkit-tap-highlight-color: rgba(212, 175, 55, 0.2);
+    touch-action: manipulation;
+  }
+
+  /* Improve button and link touch targets */
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Smooth scrolling on iOS */
+  * {
+    -webkit-overflow-scrolling: touch;
   }
 }
 

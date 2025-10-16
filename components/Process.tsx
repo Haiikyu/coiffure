@@ -83,7 +83,7 @@ export default function Process() {
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
                   transition={{ duration: 0.8, delay: 0.5 + index * 0.2 }}
-                  className="text-[120px] md:text-[180px] font-extralight text-gold-500/20 leading-none"
+                  className="text-[80px] sm:text-[120px] md:text-[180px] font-extralight text-gold-500/20 leading-none"
                 >
                   {step.number}
                 </motion.div>
@@ -95,7 +95,7 @@ export default function Process() {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                   transition={{ duration: 0.8, delay: 0.6 + index * 0.2 }}
-                  className="text-4xl md:text-5xl font-extralight text-charcoal-900 mb-6"
+                  className="text-3xl sm:text-4xl md:text-5xl font-extralight text-charcoal-900 mb-6"
                 >
                   {step.title}
                 </motion.h3>

@@ -169,10 +169,10 @@ export default function Gallery() {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.3, delay: 0.2 }}
               onClick={closeFullscreen}
-              className="absolute top-8 right-8 z-50 w-12 h-12 flex items-center justify-center
+              className="absolute top-4 right-4 md:top-8 md:right-8 z-50 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center
                        text-cream-50 hover:text-gold-500 transition-colors"
             >
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5 md:w-6 md:h-6" />
             </motion.button>
 
             {/* Navigation Arrows */}
@@ -185,10 +185,10 @@ export default function Gallery() {
                 e.stopPropagation();
                 prevImage();
               }}
-              className="absolute left-8 z-50 w-12 h-12 flex items-center justify-center
+              className="absolute left-2 md:left-8 z-50 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center
                        text-cream-50 hover:text-gold-500 transition-colors"
             >
-              <ChevronLeft className="w-8 h-8" />
+              <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
             </motion.button>
 
             <motion.button
@@ -200,10 +200,10 @@ export default function Gallery() {
                 e.stopPropagation();
                 nextImage();
               }}
-              className="absolute right-8 z-50 w-12 h-12 flex items-center justify-center
+              className="absolute right-2 md:right-8 z-50 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center
                        text-cream-50 hover:text-gold-500 transition-colors"
             >
-              <ChevronRight className="w-8 h-8" />
+              <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
             </motion.button>
 
             {/* Image Container */}
@@ -212,7 +212,7 @@ export default function Gallery() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="relative max-w-7xl max-h-[85vh] mx-auto px-24"
+              className="relative max-w-7xl max-h-[85vh] mx-auto px-4 sm:px-8 md:px-16 lg:px-24"
               onClick={(e) => e.stopPropagation()}
             >
               <img

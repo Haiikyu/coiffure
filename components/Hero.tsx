@@ -20,10 +20,13 @@ export default function Hero({ onBookingClick }: HeroProps) {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth - 0.5) * 20,
-        y: (e.clientY / window.innerHeight - 0.5) * 20,
-      });
+      // Only enable parallax on desktop (width > 768px)
+      if (window.innerWidth > 768) {
+        setMousePosition({
+          x: (e.clientX / window.innerWidth - 0.5) * 20,
+          y: (e.clientY / window.innerHeight - 0.5) * 20,
+        });
+      }
     };
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -119,7 +122,7 @@ export default function Hero({ onBookingClick }: HeroProps) {
               initial={{ y: 100 }}
               animate={{ y: 0 }}
               transition={{ duration: 1.2, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tighter text-cream-50 leading-[0.9]"
+              className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tighter text-cream-50 leading-[0.9]"
             >
               L'art
             </motion.h1>
@@ -135,7 +138,7 @@ export default function Hero({ onBookingClick }: HeroProps) {
               initial={{ y: 100 }}
               animate={{ y: 0 }}
               transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tighter leading-[0.9]"
+              className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tighter leading-[0.9]"
             >
               <span className="text-cream-50">du </span>
               <span className="italic text-gold-500">cheveu</span>
@@ -161,7 +164,7 @@ export default function Hero({ onBookingClick }: HeroProps) {
           >
             <motion.button
               onClick={onBookingClick}
-              className="group relative px-16 py-5 overflow-hidden"
+              className="group relative px-12 sm:px-16 py-4 sm:py-5 overflow-hidden"
               whileHover="hover"
               whileTap={{ scale: 0.95 }}
             >

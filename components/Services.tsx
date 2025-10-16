@@ -98,7 +98,7 @@ export default function Services() {
               className="group relative"
             >
               {/* Card Container */}
-              <div className="relative bg-white p-12 md:p-16 overflow-hidden h-full">
+              <div className="relative bg-white p-8 sm:p-12 md:p-16 overflow-hidden h-full">
                 {/* Hover Background */}
                 <motion.div
                   variants={{

@@ -86,7 +86,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
           >
             <div className="bg-cream-50 w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-2xl border border-cream-200">
               {/* Header */}
-              <div className="sticky top-0 bg-cream-50 border-b border-cream-200 p-8 flex items-center justify-between z-10">
+              <div className="sticky top-0 bg-cream-50 border-b border-cream-200 p-4 sm:p-6 md:p-8 flex items-center justify-between z-10">
                 <div>
                   <div className="text-xs uppercase tracking-[0.3em] text-gold-500 font-light mb-3">
                     Réservation
@@ -110,9 +110,9 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
               </div>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="p-8 space-y-8">
+              <form onSubmit={handleSubmit} className="p-4 sm:p-6 md:p-8 space-y-6 md:space-y-8">
                 {/* Personal Info */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div>
                     <label htmlFor="name" className="flex items-center gap-2 text-sm font-light text-charcoal-900 mb-2">
                       <User className="w-4 h-4" />
@@ -208,7 +208,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                 </div>
 
                 {/* Date & Time */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   <div>
                     <label htmlFor="date" className="flex items-center gap-2 text-sm font-light text-charcoal-900 mb-2">
                       <Calendar className="w-4 h-4" />

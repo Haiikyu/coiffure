@@ -8,7 +8,8 @@
       "Bash(npm run build:*)",
       "Bash(git add:*)",
       "Bash(git commit -m \"$(cat <<''EOF''\nfix: Configure Next.js for Vercel deployment\n\n- Specify Unsplash domain in image config\n- Disable ESLint during build to avoid warnings as errors\n- Keep TypeScript checking enabled\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
-      "Bash(git push)"
+      "Bash(git push)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
